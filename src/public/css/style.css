@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    background-color: #6495ed;
+    font-family: 'Roboto', sans-serif;
+}
+
+div {
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+a[href="/add-recipe"] {
+    margin: 20px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+div.recipe-overview:hover {
+    box-shadow: 6px 6px 3px #666666;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+button:hover {
+    background-color: #4980dc;
+}
+
+textarea, input {
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    margin: 0px 3px 3px 0px;
+}

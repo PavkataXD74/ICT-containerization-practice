@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs'); %> 
+
+<% recipes.forEach(recipe => { %>
+    <a
+        href="/recipes/<%- recipe.id %>"
+        class="recipe">
+        <div
+            id="<%- recipe.id %>"
+            class="recipe-overview">
+            <h3 class="recipe-name"><%- recipe.name %></h3>
+            <p class="recipe"></p>
+        </div>
+    </a>
+
+    <script>
+        var body = `<%- recipe.body %>`;
+        var words = body.split(" ");
+        var length = Math.ceil(words.length / 3);
+        var string = "";
+        for (let i = 0; i < length; i++) {
+            string += ` ${words[i]}`;
+        }
+        string += "...";
+        document.querySelector(
+            'a[href="/recipes/<%- recipe.id %>"]'
+        ).children[0].children[1].innerHTML = string;
+    </script>
+<% }) %>
+
+<a href="/add-recipe"><button>Добави Нова Рецепта</button></a>
+
+<%- include('../partials/footer.ejs'); %>

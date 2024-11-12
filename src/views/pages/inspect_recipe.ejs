@@ -1,0 +1,14 @@
+<%- include('../partials/header.ejs', { title: recipe.name }); %>
+
+<div id="<%- recipe.id %>">
+	<h3 class="recipe-name"><%- recipe.name %></h3>
+	<p class="recipe"><%- recipe.body %></p>
+	<a href="/edit-recipe/<%- recipe.id %>"><button>Промени Рецептата</button></a>
+    
+	<button
+		onclick="confirm('Сигурни ли сте, че искате да изтриете рецептата?') ? location = '../delete/<%- recipe.id %>' : null">
+		Изтрий Рецептата
+	</button>
+</div>
+
+<%- include('../partials/footer.ejs'); %>

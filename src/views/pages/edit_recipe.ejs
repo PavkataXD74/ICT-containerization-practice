@@ -1,0 +1,29 @@
+<%- include('../partials/header.ejs'); %>
+
+<form
+	action="/edit/<%- recipe.id %>"
+	method="post">
+	<label for="name">Име на рецептата: </label><br />
+	<input
+		type="text"
+		name="name"
+		value="<%- recipe.name %>"
+		required />
+	<br />
+
+	<label for="body">Рецептата: </label><br />
+	<textarea
+		name="body"
+		cols="80"
+		rows="20"
+		required
+		style="resize: none">
+        <%- recipe.body %>
+    </textarea
+	>
+	<br />
+
+	<button type="submit">Промени рецептата</button>
+</form>
+
+<%- include('../partials/footer.ejs'); %>
